@@ -32,6 +32,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative; /* Adicionado */
 }
 
 .search-box input{
@@ -40,7 +41,7 @@ body{
     font-size: 24px;
     font-weight: 500;
     text-transform: uppercase;
-    padding-left: 32px;
+    padding-left: 40px; /* Aumentado para o ícone */
 }
 
 .search-box input::placeholder{
@@ -59,6 +60,7 @@ body{
     border-radius: 50%;
     font-size: 22px;
     transition: 0.4s ease;
+    border: none; /* Adicionado */
 }
 
 .search-box button:hover{
@@ -66,10 +68,13 @@ body{
     background: #06283D;
 }
 
-.search-box i{
+/* CORREÇÃO para os ícones */
+.search-box .fa-location-dot {
     position: absolute;
+    left: 8px;
     color: #06283D;
     font-size: 28px;
+    z-index: 1;
 }
 
 .weather-box{
